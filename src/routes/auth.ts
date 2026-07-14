@@ -16,11 +16,7 @@ router.post('/registro', async (req: Request, res: Response) => {
     const usuario = await prisma.usuario.create({
       data: { nome, email, senha_hash: senhaHash, empresa_id: empresa.id, role: 'administrativo', ativo: true }
     });
-    const token = jwt.sign(
-      { usuarioId: usuario.id, empresaId: empresa.id },
-      process.env.JWT_SECRET || 'chave-secreta',
-      { expiresIn: '24h' }
-    );
+    const token = jwt.sign({ usuarioId: usuario.id, empresaId: empresa.id }, process.env.JWT_SECRET || 'chave-secreta', { expiresIn: '24h' });
     res.json({ success: true, data: { empresaId: empresa.id, usuarioId: usuario.id, token } });
   } catch (error: any) {
     res.status(400).json({ success: false, message: error.message });
@@ -34,25 +30,10 @@ router.post('/login', async (req: Request, res: Response) => {
     if (!usuario) return res.status(401).json({ success: false, message: 'Invalido' });
     const ok = await bcrypt.compare(senha, usuario.senha_hash);
     if (!ok) return res.status(401).json({ success: false, message: 'Invalido' });
-    const token = jwt.sign(
-      { usuarioId: usuario.id, empresaId: usuario.empresa_id },
-      process.env.JWT_SECRET || 'chave-secreta',
-      { expiresIn: '24h' }
-    );
+    const token = jwt.sign({ usuarioId: usuario.id, empresaId: usuario.empresa_id }, process.env.JWT_SECRET || 'chave-secreta', { expiresIn: '24h' });
     res.json({ success: true, data: { token } });
   } catch (error: any) {
     res.status(400).json({ success: false, message: error.message });
-  }
-});
-
-router.get('/me', (req: Request, res: Response) => {
-  try {
-    const token = req.headers.authorization?.replace('Bearer ', '');
-    if (!token) return res.status(401).json({ success: false });
-    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'chave-secreta');
-    res.json({ success: true, data: decoded });
-  } catch {
-    res.status(401).json({ success: false });
   }
 });
 
