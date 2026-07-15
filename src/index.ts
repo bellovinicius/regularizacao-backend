@@ -9,10 +9,6 @@ app.get('/health', (req, res) => {
   res.json({ success: true, message: 'API OK', statusCode: 200 });
 });
 
-app.get('/api/test', (req, res) => {
-  res.json({ success: true, data: { teste: 'funcionando' } });
-});
-
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
