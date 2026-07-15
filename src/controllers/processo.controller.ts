@@ -8,7 +8,7 @@ export const processoController = {
   async criar(req: AuthRequest, res: Response, next: NextFunction) {
     try {
       const data = processoCriarSchema.parse(req.body);
-      const processo = await processoService.criar(req.empresa_id!, data);
+      const processo = await processoService.criar(req.empresa_id!, data as any);
 
       logger.info('Processo criado', { processo_id: processo.id });
 
