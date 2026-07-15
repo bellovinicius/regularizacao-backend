@@ -8,7 +8,7 @@ export const authController = {
   async registro(req: AuthRequest, res: Response, next: NextFunction) {
     try {
       const data = registroSchema.parse(req.body);
-      const resultado = await authService.registro(data);
+      const resultado = await authService.registro(data as any);
 
       logger.info('Novo usuário registrado', { empresa_id: resultado.empresa_id });
 
@@ -23,7 +23,8 @@ export const authController = {
 
   async login(req: AuthRequest, res: Response, next: NextFunction) {
     try {
-      const { email, senha, empresa_id } = loginSchema.parse(req.body);
+      const parsed = loginSchema.parse(req.body);
+      const { email, senha, empresa_id } = parsed as any;
       const resultado = await authService.login(email, senha, empresa_id);
 
       res.json({
