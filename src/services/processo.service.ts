@@ -3,41 +3,41 @@ import { prisma } from '../config/database';
 import { ETAPAS } from '../types';
 
 export const processoService = {
-  async criar(empresa_id: string, data: {
-    produtor_nome: string;
-    produtor_email: string;
-    produtor_telefone: string;
-    valor_total: number;
+  async criar(empresaId: string, data: {
+    produtorNome: string;
+    produtorEmail: string;
+    produtorTelefone: string;
+    valorTotal: number;
   }) {
-    const count = await prisma.processo.count({ where: { empresa_id } });
+    const count = await prisma.processo.count({ where: { empresaId } });
     const numero = `PROC-${new Date().getFullYear()}-${String(count + 1).padStart(4, '0')}`;
 
     return processoRepo.criar({
-      empresa_id,
+      empresaId,
       numero,
       ...data,
     });
   },
 
-  async buscar(id: string, empresa_id: string) {
-    const processo = await processoRepo.buscarPorId(id, empresa_id);
-    const etapaAtual = ETAPAS.find(e => e.id === processo.etapa_atual);
+  async buscar(id: string, empresaId: string) {
+    const processo = await processoRepo.buscarPorId(id, empresaId);
+    const etapaAtual = ETAPAS.find(e => e.id === processo.etapaAtual);
 
     return {
       ...processo,
-      etapa_atual_nome: etapaAtual?.nome,
+      etapaAtualNome: etapaAtual?.nome,
     };
   },
 
-  async listar(empresa_id: string) {
-    return processoRepo.listarPorEmpresa(empresa_id);
+  async listar(empresaId: string) {
+    return processoRepo.listarPorEmpresa(empresaId);
   },
 
-  async avancarEtapa(id: string, empresa_id: string, novaEtapa: number) {
+  async avancarEtapa(id: string, empresaId: string, novaEtapa: number) {
     if (novaEtapa < 1 || novaEtapa > 13) {
       throw new Error('Etapa inválida');
     }
 
-    return processoRepo.avancarEtapa(id, empresa_id, novaEtapa);
+    return processoRepo.avancarEtapa(id, empresaId, novaEtapa);
   },
 };
