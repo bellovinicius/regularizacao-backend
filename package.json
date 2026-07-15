@@ -7,13 +7,14 @@
     "node": "18.x"
   },
   "scripts": {
-    "dev": "ts-node src/server.ts",
-    "build": "tsc",
-    "start": "node dist/server.js",
-    "prisma:migrate": "prisma migrate dev",
-    "prisma:studio": "prisma studio",
-    "prisma:generate": "prisma generate"
-  },
+  "dev": "ts-node src/server.ts",
+  "build": "prisma generate && tsc",
+  "start": "node dist/server.js",
+  "postinstall": "prisma generate",
+  "prisma:migrate": "prisma migrate dev",
+  "prisma:studio": "prisma studio",
+  "prisma:generate": "prisma generate"
+},
   "dependencies": {
     "@prisma/client": "5.7.1",
     "bcryptjs": "2.4.3",
