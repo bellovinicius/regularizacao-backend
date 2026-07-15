@@ -1,13 +1,13 @@
 import { Request } from 'express';
 
 export interface AuthRequest extends Request {
-  usuario_id?: string;
-  empresa_id?: string;
+  usuarioId?: string;
+  empresaId?: string;
 }
 
 export interface JwtPayload {
-  usuario_id: string;
-  empresa_id: string;
+  usuarioId: string;
+  empresaId: string;
 }
 
 export const ETAPAS = [
