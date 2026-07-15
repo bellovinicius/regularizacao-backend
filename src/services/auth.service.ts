@@ -9,7 +9,7 @@ export const authService = {
     nome: string;
     email: string;
     senha: string;
-    razao_social: string;
+    razaoSocial: string;
     cnpj: string;
   }) {
     const empresaExiste = await prisma.empresa.findUnique({
@@ -22,7 +22,7 @@ export const authService = {
 
     const empresa = await prisma.empresa.create({
       data: {
-        razao_social: data.razao_social,
+        razaoSocial: data.razaoSocial,
         cnpj: data.cnpj,
       },
     });
@@ -30,41 +30,41 @@ export const authService = {
     const senhaHash = await bcrypt.hash(data.senha, 10);
 
     const usuario = await usuarioRepo.criar({
-      empresa_id: empresa.id,
+      empresaId: empresa.id,
       nome: data.nome,
       email: data.email,
-      senha_hash: senhaHash,
+      senhaHash: senhaHash,
       role: 'admin',
     });
 
     const token = generateToken({
-      usuario_id: usuario.id,
-      empresa_id: empresa.id,
+      usuarioId: usuario.id,
+      empresaId: empresa.id,
     });
 
     return {
-      empresa_id: empresa.id,
-      usuario_id: usuario.id,
+      empresaId: empresa.id,
+      usuarioId: usuario.id,
       token,
     };
   },
 
-  async login(email: string, senha: string, empresa_id: string) {
-    const usuario = await usuarioRepo.buscarPorEmail(email, empresa_id);
+  async login(email: string, senha: string, empresaId: string) {
+    const usuario = await usuarioRepo.buscarPorEmail(email, empresaId);
 
     if (!usuario) {
       throw new UnauthorizedError('Credenciais inválidas');
     }
 
-    const senhaValida = await bcrypt.compare(senha, usuario.senha_hash);
+    const senhaValida = await bcrypt.compare(senha, usuario.senhaHash);
 
     if (!senhaValida) {
       throw new UnauthorizedError('Credenciais inválidas');
     }
 
     const token = generateToken({
-      usuario_id: usuario.id,
-      empresa_id,
+      usuarioId: usuario.id,
+      empresaId,
     });
 
     return { token };
