@@ -10,6 +10,7 @@
     "dev": "ts-node src/server.ts",
     "build": "prisma generate && tsc",
     "start": "node dist/server.js",
+    "preview": "node dist/server.js",
     "postinstall": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "prisma:studio": "prisma studio",
