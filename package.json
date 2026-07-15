@@ -4,7 +4,7 @@
   "description": "Backend SaaS Regularização Ambiental Rural",
   "main": "dist/server.js",
   "engines": {
-    "node": "18.x"
+    "node": "20.x"
   },
   "scripts": {
   "dev": "ts-node src/server.ts",
