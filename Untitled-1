@@ -1,0 +1,1 @@
+DATABASE_URL="postgresql://regularizacao_db_tj5r_user:DqFV6pkqPl3Xo2hEifW2maue1imsY9qu@dpg-d9bv8vr7uimc73ckfuc0-a.oregon-postgres.render.com/regularizacao_db_tj5r" npx prisma db push
