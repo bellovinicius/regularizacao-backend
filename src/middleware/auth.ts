@@ -13,8 +13,8 @@ export const authMiddleware = (req: AuthRequest, res: Response, next: NextFuncti
     const token = authHeader.slice(7);
     const payload = verifyToken(token);
 
-    req.usuario_id = payload.usuario_id;
-    req.empresa_id = payload.empresa_id;
+    req.usuarioId = payload.usuarioId;
+    req.empresaId = payload.empresaId;
 
     next();
   } catch (err) {
