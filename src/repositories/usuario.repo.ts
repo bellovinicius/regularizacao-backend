@@ -3,13 +3,13 @@ import { BadRequestError, NotFoundError } from '../utils/errors';
 
 export const usuarioRepo = {
   async criar(data: {
-    empresa_id: string;
+    empresaId: string;
     nome: string;
     email: string;
-    senha_hash: string;
+    senhaHash: string;
     role: string;
   }) {
-    const existe = await prisma.usuario.findUnique({
+    const existe = await prisma.usuario.findFirst({
       where: { email: data.email },
     });
 
@@ -20,15 +20,15 @@ export const usuarioRepo = {
     return prisma.usuario.create({ data });
   },
 
-  async buscarPorEmail(email: string, empresa_id: string) {
+  async buscarPorEmail(email: string, empresaId: string) {
     return prisma.usuario.findFirst({
-      where: { email, empresa_id },
+      where: { email, empresaId },
     });
   },
 
-  async buscarPorId(id: string, empresa_id: string) {
+  async buscarPorId(id: string, empresaId: string) {
     const usuario = await prisma.usuario.findFirst({
-      where: { id, empresa_id },
+      where: { id, empresaId },
     });
 
     if (!usuario) {
