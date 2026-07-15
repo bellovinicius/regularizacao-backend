@@ -7,10 +7,10 @@ import { logger } from '../utils/logger';
 export const authController = {
   async registro(req: AuthRequest, res: Response, next: NextFunction) {
     try {
-      const data = registroSchema.parse(req.body);
-      const resultado = await authService.registro(data as any);
+      const parsed = registroSchema.parse(req.body);
+      const resultado = await authService.registro(parsed as any);
 
-      logger.info('Novo usuário registrado', { empresa_id: resultado.empresa_id });
+      logger.info('Novo usuário registrado', { empresaId: resultado.empresaId });
 
       res.status(201).json({
         success: true,
@@ -24,8 +24,8 @@ export const authController = {
   async login(req: AuthRequest, res: Response, next: NextFunction) {
     try {
       const parsed = loginSchema.parse(req.body);
-      const { email, senha, empresa_id } = parsed as any;
-      const resultado = await authService.login(email, senha, empresa_id);
+      const { email, senha, empresaId } = parsed as any;
+      const resultado = await authService.login(email, senha, empresaId);
 
       res.json({
         success: true,
@@ -41,8 +41,8 @@ export const authController = {
       res.json({
         success: true,
         data: {
-          usuario_id: req.usuario_id,
-          empresa_id: req.empresa_id,
+          usuarioId: req.usuarioId,
+          empresaId: req.empresaId,
         },
       });
     } catch (err) {
