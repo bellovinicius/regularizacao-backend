@@ -1,31 +1,31 @@
 import { z } from 'zod';
 
 export const registroSchema = z.object({
-  nome: z.string().min(3).transform(v => v || ''),
-  email: z.string().email().transform(v => v || ''),
-  senha: z.string().min(8).transform(v => v || ''),
-  razao_social: z.string().min(3).transform(v => v || ''),
-  cnpj: z.string().regex(/^\d{14}/).transform(v => v || ''),
+  nome: z.string().min(3),
+  email: z.string().email(),
+  senha: z.string().min(8),
+  razaoSocial: z.string().min(3),
+  cnpj: z.string().regex(/^\d{14}$/),
 });
 
 export const loginSchema = z.object({
-  email: z.string().email().transform(v => v || ''),
-  senha: z.string().min(1).transform(v => v || ''),
-  empresa_id: z.string().min(1).transform(v => v || ''),
+  email: z.string().email(),
+  senha: z.string().min(1),
+  empresaId: z.string().uuid(),
 });
 
 export const processoCriarSchema = z.object({
-  produtor_nome: z.string().min(1).transform(v => v || ''),
-  produtor_email: z.string().email().transform(v => v || ''),
-  produtor_telefone: z.string().min(1).transform(v => v || ''),
-  valor_total: z.number().positive().transform(v => v || 0),
+  produtorNome: z.string().min(1),
+  produtorEmail: z.string().email(),
+  produtorTelefone: z.string().min(1),
+  valorTotal: z.number().positive(),
 });
 
 export const documentoUploadSchema = z.object({
-  tipo: z.string().min(1).transform(v => v || ''),
+  tipo: z.string().min(1),
 });
 
 export const pagamentoSchema = z.object({
-  valor: z.number().positive().transform(v => v || 0),
-  tipo: z.enum(['pix', 'boleto']).transform(v => v || 'pix'),
+  valor: z.number().positive(),
+  tipo: z.enum(['pix', 'boleto']),
 });
