@@ -1,206 +1,42 @@
-
-Search logs
-
-Live tail
-
-
-
-tsconfig.json(10,13): error TS1136: Property assignment expected.
-tsconfig.json(11,1): error TS1005: ',' expected.
-tsconfig.json(11,1): error TS1136: Property assignment expected.
-tsconfig.json(11,4): error TS1005: ',' expected.
-tsconfig.json(11,4): error TS1136: Property assignment expected.
-tsconfig.json(11,12): error TS1005: ',' expected.
-tsconfig.json(11,12): error TS1136: Property assignment expected.
-tsconfig.json(11,16): error TS1005: ',' expected.
-tsconfig.json(11,16): error TS1136: Property assignment expected.
-tsconfig.json(11,34): error TS1005: ',' expected.
-tsconfig.json(11,43): error TS1005: ',' expected.
-tsconfig.json(11,51): error TS1005: '{' expected.
-tsconfig.json(11,53): error TS1327: String literal with double quotes expected.
-tsconfig.json(12,3): error TS1328: Property value can only be string literal, numeric literal, 'true', 'false', 'null', object literal or array literal.
-tsconfig.json(12,7): error TS1005: ',' expected.
-tsconfig.json(12,7): error TS1136: Property assignment expected.
-tsconfig.json(12,13): error TS1005: ',' expected.
-tsconfig.json(12,13): error TS1136: Property assignment expected.
-tsconfig.json(12,17): error TS1005: ',' expected.
-tsconfig.json(12,19): error TS1136: Property assignment expected.
-tsconfig.json(13,1): error TS1005: ',' expected.
-tsconfig.json(13,1): error TS1136: Property assignment expected.
-tsconfig.json(13,5): error TS1005: ',' expected.
-tsconfig.json(13,17): error TS1327: String literal with double quotes expected.
-tsconfig.json(13,21): error TS1005: ':' expected.
-tsconfig.json(13,21): error TS1328: Property value can only be string literal, numeric literal, 'true', 'false', 'null', object literal or array literal.
-tsconfig.json(14,1): error TS1003: Identifier expected.
-tsconfig.json(14,34): error TS1005: ',' expected.
-tsconfig.json(14,35): error TS1327: String literal with double quotes expected.
-tsconfig.json(14,38): error TS1005: ':' expected.
-tsconfig.json(14,41): error TS1005: ',' expected.
-tsconfig.json(14,41): error TS1136: Property assignment expected.
-tsconfig.json(15,1): error TS1005: ',' expected.
-tsconfig.json(15,3): error TS1136: Property assignment expected.
-tsconfig.json(15,10): error TS1005: ',' expected.
-tsconfig.json(15,10): error TS1136: Property assignment expected.
-tsconfig.json(15,19): error TS1005: ',' expected.
-tsconfig.json(15,22): error TS1136: Property assignment expected.
-tsconfig.json(16,1): error TS1005: ',' expected.
-tsconfig.json(16,1): error TS1136: Property assignment expected.
-tsconfig.json(16,8): error TS1005: ',' expected.
-tsconfig.json(16,8): error TS1136: Property assignment expected.
-tsconfig.json(16,15): error TS1005: ',' expected.
-tsconfig.json(16,15): error TS1136: Property assignment expected.
-tsconfig.json(16,22): error TS1005: ',' expected.
-tsconfig.json(16,22): error TS1136: Property assignment expected.
-tsconfig.json(16,27): error TS1005: ',' expected.
-tsconfig.json(16,27): error TS1136: Property assignment expected.
-tsconfig.json(16,33): error TS1005: ',' expected.
-tsconfig.json(16,34): error TS1136: Property assignment expected.
-tsconfig.json(16,40): error TS1327: String literal with double quotes expected.
-tsconfig.json(16,40): error TS1005: ',' expected.
-tsconfig.json(16,40): error TS1328: Property value can only be string literal, numeric literal, 'true', 'false', 'null', object literal or array literal.
-tsconfig.json(17,1): error TS1127: Invalid character.
-tsconfig.json(17,3): error TS1136: Property assignment expected.
-tsconfig.json(17,13): error TS1005: ',' expected.
-tsconfig.json(17,13): error TS1136: Property assignment expected.
-tsconfig.json(17,20): error TS1005: ',' expected.
-tsconfig.json(17,20): error TS1136: Property assignment expected.
-tsconfig.json(17,30): error TS1005: ',' expected.
-tsconfig.json(17,32): error TS1003: Identifier expected.
-tsconfig.json(17,36): error TS1005: '{' expected.
-tsconfig.json(17,36): error TS1136: Property assignment expected.
-tsconfig.json(17,38): error TS1327: String literal with double quotes expected.
-tsconfig.json(17,39): error TS1005: ',' expected.
-tsconfig.json(17,39): error TS1328: Property value can only be string literal, numeric literal, 'true', 'false', 'null', object literal or array literal.
-tsconfig.json(17,40): error TS1003: Identifier expected.
-tsconfig.json(17,61): error TS1109: Expression expected.
-tsconfig.json(17,74): error TS1136: Property assignment expected.
-tsconfig.json(17,74): error TS1351: An identifier or keyword cannot immediately follow a numeric literal.
-tsconfig.json(18,1): error TS1005: ',' expected.
-tsconfig.json(18,1): error TS1136: Property assignment expected.
-tsconfig.json(18,7): error TS1005: ',' expected.
-tsconfig.json(18,7): error TS1136: Property assignment expected.
-tsconfig.json(18,13): error TS1005: ',' expected.
-tsconfig.json(18,13): error TS1136: Property assignment expected.
-tsconfig.json(18,20): error TS1005: ',' expected.
-tsconfig.json(18,20): error TS1136: Property assignment expected.
-tsconfig.json(18,27): error TS1005: ',' expected.
-tsconfig.json(18,27): error TS1136: Property assignment expected.
-tsconfig.json(18,34): error TS1327: String literal with double quotes expected.
-tsconfig.json(18,34): error TS1005: ',' expected.
-tsconfig.json(18,34): error TS1328: Property value can only be string literal, numeric literal, 'true', 'false', 'null', object literal or array literal.
-tsconfig.json(18,42): error TS1005: ',' expected.
-tsconfig.json(18,49): error TS1005: ',' expected.
-tsconfig.json(23,1): error TS1005: ',' expected.
-tsconfig.json(23,4): error TS1005: ',' expected.
-tsconfig.json(23,10): error TS1005: ',' expected.
-tsconfig.json(23,16): error TS1005: ',' expected.
-tsconfig.json(23,23): error TS1005: ',' expected.
-tsconfig.json(23,30): error TS1005: ',' expected.
-tsconfig.json(23,33): error TS1005: ',' expected.
-tsconfig.json(23,37): error TS1005: ',' expected.
-tsconfig.json(23,46): error TS1005: ',' expected.
-tsconfig.json(23,53): error TS1005: ',' expected.
-tsconfig.json(28,1): error TS1005: ',' expected.
-tsconfig.json(28,5): error TS1005: ',' expected.
-tsconfig.json(28,11): error TS1005: ',' expected.
-tsconfig.json(28,16): error TS1005: ',' expected.
-tsconfig.json(28,19): error TS1005: ',' expected.
-tsconfig.json(28,29): error TS1005: ',' expected.
-tsconfig.json(28,36): error TS1005: ',' expected.
-tsconfig.json(28,42): error TS1005: ',' expected.
-tsconfig.json(28,48): error TS1005: ',' expected.
-tsconfig.json(29,1): error TS1127: Invalid character.
-tsconfig.json(29,2): error TS1127: Invalid character.
-tsconfig.json(29,3): error TS1127: Invalid character.
-tsconfig.json(29,4): error TS1127: Invalid character.
-tsconfig.json(29,5): error TS1127: Invalid character.
-tsconfig.json(29,6): error TS1127: Invalid character.
-tsconfig.json(29,7): error TS1127: Invalid character.
-tsconfig.json(29,8): error TS1127: Invalid character.
-tsconfig.json(29,9): error TS1127: Invalid character.
-tsconfig.json(29,10): error TS1127: Invalid character.
-tsconfig.json(29,11): error TS1127: Invalid character.
-tsconfig.json(29,12): error TS1127: Invalid character.
-tsconfig.json(29,13): error TS1127: Invalid character.
-tsconfig.json(29,14): error TS1127: Invalid character.
-tsconfig.json(29,15): error TS1127: Invalid character.
-tsconfig.json(29,16): error TS1127: Invalid character.
-tsconfig.json(29,17): error TS1127: Invalid character.
-tsconfig.json(29,18): error TS1127: Invalid character.
-tsconfig.json(29,19): error TS1127: Invalid character.
-tsconfig.json(29,20): error TS1127: Invalid character.
-tsconfig.json(29,21): error TS1127: Invalid character.
-tsconfig.json(29,22): error TS1127: Invalid character.
-tsconfig.json(29,23): error TS1127: Invalid character.
-tsconfig.json(29,24): error TS1127: Invalid character.
-tsconfig.json(29,25): error TS1127: Invalid character.
-tsconfig.json(29,26): error TS1127: Invalid character.
-tsconfig.json(29,27): error TS1127: Invalid character.
-tsconfig.json(29,28): error TS1127: Invalid character.
-tsconfig.json(29,29): error TS1127: Invalid character.
-tsconfig.json(29,30): error TS1127: Invalid character.
-tsconfig.json(29,31): error TS1127: Invalid character.
-tsconfig.json(29,32): error TS1127: Invalid character.
-tsconfig.json(29,33): error TS1127: Invalid character.
-tsconfig.json(29,34): error TS1127: Invalid character.
-tsconfig.json(29,35): error TS1127: Invalid character.
-tsconfig.json(29,36): error TS1127: Invalid character.
-tsconfig.json(29,37): error TS1127: Invalid character.
-tsconfig.json(29,38): error TS1127: Invalid character.
-tsconfig.json(29,39): error TS1127: Invalid character.
-tsconfig.json(29,40): error TS1127: Invalid character.
-tsconfig.json(29,41): error TS1127: Invalid character.
-tsconfig.json(29,42): error TS1127: Invalid character.
-tsconfig.json(29,43): error TS1127: Invalid character.
-tsconfig.json(29,44): error TS1127: Invalid character.
-tsconfig.json(29,45): error TS1127: Invalid character.
-tsconfig.json(29,46): error TS1127: Invalid character.
-tsconfig.json(29,47): error TS1127: Invalid character.
-tsconfig.json(29,48): error TS1127: Invalid character.
-tsconfig.json(29,49): error TS1127: Invalid character.
-tsconfig.json(29,50): error TS1127: Invalid character.
-tsconfig.json(29,51): error TS1127: Invalid character.
-tsconfig.json(29,52): error TS1127: Invalid character.
-tsconfig.json(29,53): error TS1127: Invalid character.
-tsconfig.json(29,54): error TS1127: Invalid character.
-tsconfig.json(29,55): error TS1127: Invalid character.
-tsconfig.json(29,56): error TS1127: Invalid character.
-tsconfig.json(29,57): error TS1127: Invalid character.
-tsconfig.json(29,58): error TS1127: Invalid character.
-tsconfig.json(29,59): error TS1127: Invalid character.
-tsconfig.json(29,60): error TS1127: Invalid character.
-tsconfig.json(29,61): error TS1127: Invalid character.
-tsconfig.json(29,62): error TS1127: Invalid character.
-tsconfig.json(29,63): error TS1127: Invalid character.
-tsconfig.json(30,1): error TS1127: Invalid character.
-tsconfig.json(30,14): error TS1005: ',' expected.
-tsconfig.json(30,19): error TS1005: ',' expected.
-tsconfig.json(30,23): error TS1005: ',' expected.
-tsconfig.json(30,26): error TS1005: ',' expected.
-tsconfig.json(30,37): error TS1005: ',' expected.
-tsconfig.json(30,40): error TS1005: ',' expected.
-tsconfig.json(30,45): error TS1005: ',' expected.
-tsconfig.json(30,63): error TS1127: Invalid character.
-tsconfig.json(31,1): error TS1127: Invalid character.
-tsconfig.json(31,8): error TS1005: ',' expected.
-tsconfig.json(31,15): error TS1005: ',' expected.
-tsconfig.json(31,26): error TS1005: ',' expected.
-tsconfig.json(31,26): error TS1327: String literal with double quotes expected.
-tsconfig.json(31,30): error TS1005: ':' expected.
-tsconfig.json(31,30): error TS1328: Property value can only be string literal, numeric literal, 'true', 'false', 'null', object literal or array literal.
-tsconfig.json(31,41): error TS1005: ',' expected.
-tsconfig.json(31,41): error TS1136: Property assignment expected.
-tsconfig.json(31,49): error TS1005: ',' expected.
-tsconfig.json(31,49): error TS1136: Property assignment expected.
-tsconfig.json(31,53): error TS1005: ',' expected.
-tsconfig.json(31,53): error TS1136: Property assignment expected.
-tsconfig.json(31,60): error TS1327: String literal with double quotes expected.
-tsconfig.json(31,60): error TS1005: ',' expected.
-tsconfig.json(31,60): error TS1328: Property value can only be string literal, numeric literal, 'true', 'false', 'null', object literal or array literal.
-tsconfig.json(31,63): error TS1127: Invalid character.
-tsconfig.json(32,1): error TS1127: Invalid character.
-tsconfig.json(32,4): error TS1327: String literal with double quotes expected.
-tsconfig.json(32,10): error TS1328: Property value can only be string literal, numeric literal, 'true', 'false', 'null', object literal or array literal.
-tsconfig.json(33,1): error TS1127: Invalid character.
-tsconfig.json(33,2): error TS1127: Invalid character.
-tsconfig.json(33,3): error TS1127: Invalid character.
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020"],
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": false,
+    "removeComments": true
+  },
+  "include": [
+    "src/app.ts",
+    "src/server.ts",
+    "src/config/**/*.ts",
+    "src/controllers/**/*.ts",
+    "src/middleware/**/*.ts",
+    "src/repositories/**/*.ts",
+    "src/routes/**/*.ts",
+    "src/services/auth.service.ts",
+    "src/services/processo.service.ts",
+    "src/types/**/*.ts",
+    "src/utils/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/**/*.tsx",
+    "src/**/*.jsx",
+    "src/**/*.css",
+    "src/pages/**",
+    "src/components/**",
+    "src/hooks/**",
+    "src/main.tsx",
+    "src/App.tsx",
+    "src/services/api.ts"
+  ]
+}
