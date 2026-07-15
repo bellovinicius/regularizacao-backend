@@ -1,45 +1,33 @@
-# Backend - Regularização Ambiental Rural
+# Regularização Ambiental - Backend API
 
-Backend SaaS para regularização ambiental no Brasil.
+Backend Node.js/Express/TypeScript para plataforma SaaS de regularização ambiental rural.
 
 ## Setup Rápido
 
 ```bash
 npm install
-cp .env.example .env
-npm run build
-npm start
+npm run prisma:generate
+npm run prisma:migrate
+npm run dev
 ```
-
-## Arquitetura
-
-- Node.js + Express.js
-- TypeScript
-- PostgreSQL + PostGIS
-- Prisma ORM
-- JWT Authentication
-- Multi-tenant
 
 ## Endpoints
 
 ### Auth
-- POST /api/auth/registro
-- POST /api/auth/login
-- GET /api/auth/me
-
-### Clientes
-- POST /api/clientes
-- GET /api/clientes
-- GET /api/clientes/:id
-- PUT /api/clientes/:id
-- DELETE /api/clientes/:id
+- `POST /api/auth/registro` - Registrar empresa + usuário
+- `POST /api/auth/login` - Login
+- `GET /api/auth/me` - Perfil do usuário
 
 ### Processos
-- POST /api/processos
-- GET /api/processos
-- GET /api/processos/:id
-- POST /api/processos/:id/avancar-etapa
+- `POST /api/processos` - Criar processo
+- `GET /api/processos` - Listar processos
+- `GET /api/processos/:id` - Buscar processo
+- `POST /api/processos/:id/avancar-etapa` - Avançar etapa
 
-## Deploy
-
-Render.com + GitHub
+## Stack
+- Node.js 18
+- Express.js 4.18
+- TypeScript 5.3
+- Prisma 5.7
+- PostgreSQL 15
+- JWT
