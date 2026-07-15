@@ -3,19 +3,24 @@ import { NotFoundError } from '../utils/errors';
 
 export const processoRepo = {
   async criar(data: {
-    empresa_id: string;
+    empresaId: string;
     numero: string;
-    produtor_nome: string;
-    produtor_email: string;
-    produtor_telefone: string;
-    valor_total: number;
+    produtorNome: string;
+    produtorEmail: string;
+    produtorTelefone: string;
+    valorTotal: number;
   }) {
-    return prisma.processo.create({ data });
+    return prisma.processo.create({
+      data: {
+        ...data,
+        valorTotal: Number(data.valorTotal),
+      },
+    });
   },
 
-  async buscarPorId(id: string, empresa_id: string) {
+  async buscarPorId(id: string, empresaId: string) {
     const processo = await prisma.processo.findFirst({
-      where: { id, empresa_id },
+      where: { id, empresaId },
       include: {
         documentos: true,
         pagamentos: true,
@@ -29,19 +34,19 @@ export const processoRepo = {
     return processo;
   },
 
-  async listarPorEmpresa(empresa_id: string, skip = 0, take = 10) {
+  async listarPorEmpresa(empresaId: string, skip = 0, take = 10) {
     return prisma.processo.findMany({
-      where: { empresa_id },
+      where: { empresaId },
       skip,
       take,
-      orderBy: { created_at: 'desc' },
+      orderBy: { criadoEm: 'desc' },
     });
   },
 
-  async avancarEtapa(id: string, empresa_id: string, novaEtapa: number) {
-    const processo = await this.buscarPorId(id, empresa_id);
+  async avancarEtapa(id: string, empresaId: string, novaEtapa: number) {
+    const processo = await this.buscarPorId(id, empresaId);
 
-    if (novaEtapa <= processo.etapa_atual) {
+    if (novaEtapa <= processo.etapaAtual) {
       throw new Error('Etapa deve ser maior que a atual');
     }
 
@@ -50,7 +55,7 @@ export const processoRepo = {
     return prisma.processo.update({
       where: { id },
       data: {
-        etapa_atual: novaEtapa,
+        etapaAtual: novaEtapa,
         percentual,
       },
     });
